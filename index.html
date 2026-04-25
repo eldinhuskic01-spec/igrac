@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najjači nogometaš na otoku Krku</title>
+
+  <!-- Google Font - sporty & bold -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --zelena:   #2d8a4e;
+      --tamno:    #1a3a27;
+      --bijela:   #f5f9f6;
+      --zlato:    #f0c040;
+      --siva:     #c8d8cc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bijela);
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 48px,
+          rgba(45,138,78,0.07) 48px,
+          rgba(45,138,78,0.07) 96px
+        );
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Nunito', sans-serif;
+      color: var(--tamno);
+      padding: 40px 20px 60px;
+    }
+
+    .header-bar {
+      width: 100%;
+      max-width: 680px;
+      background: var(--tamno);
+      border-radius: 16px 16px 0 0;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-bar span {
+      font-size: 22px;
+    }
+    .header-bar p {
+      color: var(--siva);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 680px;
+      background: #fff;
+      border: 3px solid var(--tamno);
+      border-radius: 0 0 24px 24px;
+      box-shadow: 8px 8px 0px var(--zelena);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .naslov-wrapper {
+      background: var(--zelena);
+      padding: 28px 20px 20px;
+      position: relative;
+    }
+    .naslov-wrapper::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--zlato);
+      margin: 14px auto 0;
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      color: #fff;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      text-shadow: 3px 3px 0 var(--tamno);
+    }
+
+    .slika-wrapper {
+      padding: 32px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .player-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--zelena);
+      box-shadow: 0 6px 24px rgba(45,138,78,0.25);
+      background: var(--siva);
+    }
+
+    .badge {
+      margin-top: 16px;
+      display: inline-block;
+      background: var(--zlato);
+      color: var(--tamno);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 100px;
+      border: 2px solid var(--tamno);
+    }
+
+    .tekst-wrapper {
+      padding: 10px 32px 36px;
+    }
+
+    .opis {
+      font-size: clamp(1rem, 3vw, 1.18rem);
+      font-weight: 700;
+      line-height: 1.7;
+      color: var(--tamno);
+      margin-bottom: 16px;
+    }
+
+    .subtext {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
+
+    .card, .header-bar {
+      animation: fadeUp 0.6s ease both;
+    }
+    .header-bar { animation-delay: 0s; }
+    .card        { animation-delay: 0.1s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">
+    <span>⚽</span>
+    <p>Otok Krk</p>
+  </div>
+
+  <div class="card">
+
+    <div class="naslov-wrapper">
+      <h1>Najjači nogometaš<br>na otoku Krku</h1>
+    </div>
+
+    <div class="slika-wrapper">
+
+      <!-- Tvoja slika -->
+      <img
+        class="player-img"
+        src="marko.png"
+        alt="Najjači nogometaš Krka"
+      />
+
+      <div class="badge">🏆 #1 na Krku</div>
+    </div>
+
+    <div class="tekst-wrapper">
+
+      <p class="opis">
+        On je <strong>najbolji igrač nogometa na otoku Krku.</strong><br>
+        Nitko mu ne može ništa — ni Amar, ni Mateo, ni Bruno, ni Karlo.<br>
+        Oni se trude, a on se samo pojavi i osramoti ih. ⚽🔥
+      </p>
+
+      <p class="subtext">
+        * Ova izjava je službeno potvrđena od strane svih koji znaju nešto o nogometu.<br>
+        Svi protivnici su ljubazno zamoljeni da prihvate poraz mirno.
+      </p>
+
+    </div>
+  </div>
+
+  <p class="footer">© 2025 · Najveći footballer Krka · Sva prava pridržana (osobito pravo na gol)</p>
+
+</body>
+</html>
